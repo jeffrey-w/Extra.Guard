@@ -289,8 +289,9 @@ public static class Against
     
     /// <summary>
     /// Provides an <see cref="EnumerableValidator{T}"/> for asserting preconditions over the specified <paramref
-    /// name="enumerable"/> argument. The specified <paramref name="enumerable"/> is evaluated before it is validated.
+    /// name="enumerable"/> argument.
     /// </summary>
+    /// <remarks>The specified <paramref name="enumerable"/> is evaluated before it is validated.</remarks>
     /// <typeparam name="T">The type of element held by the specified <paramref name="enumerable"/>.</typeparam>
     /// <param name="enumerable">The <see cref="IEnumerable{T}"/> to validate.</param>
     /// <param name="suppressExceptions">If <c>true</c>, any <see cref="Exception"/>s thrown while evaluating the
