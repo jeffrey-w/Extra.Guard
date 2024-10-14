@@ -248,6 +248,23 @@ public static class Against
     }
 
     /// <summary>
+    /// Verifies that the specified element from <typeparamref name="T"/>, <paramref name="t"/>, is not <c>null</c>.
+    /// </summary>
+    /// <typeparam name="T">The <see cref="Type"/> of argument being validated.</typeparam>
+    /// <param name="t">The element from <typeparamref name="T"/> to validate.</param>
+    /// <param name="name">The identifier for the parameter being validated.</param>
+    /// <returns><paramref name="t"/>, if it is not <c>null</c>.</returns>
+    /// <exception cref="ArgumentNullException">If <paramref name="t"/> is <c>null</c>.</exception>
+    public static T Null<T>(T t, string? name = null)
+    {
+        if (t is null)
+        {
+            throw new ArgumentNullException(name, "The provided object is null.");
+        }
+        return t;
+    }
+
+    /// <summary>
     /// Verifies that the specified element from <typeparamref name="T"/>, <paramref name="t"/>, satisfies the specified
     /// <paramref name="precondition"/>.
     /// </summary>
