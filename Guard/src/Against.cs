@@ -105,7 +105,7 @@ public static class Against
     }
 
     /// <summary>
-    /// Verifies that the specified <see cref="int"/>, <paramref name="i"/>, is on the continuous, inclusive interval
+    /// Verifies that the specified <see cref="int"/>, <paramref name="i"/>, is on the discrete, inclusive interval
     /// bounded by the specified <paramref name="min"/> and <paramref name="max"/> values.
     /// </summary>
     /// <param name="i">The <see cref="int"/> to validate.</param>
@@ -126,7 +126,7 @@ public static class Against
 
     /// <summary>
     /// Verifies that the specified <see cref="Nullable{T}"/> <see cref="int"/>, <paramref name="i"/>, is on the
-    /// continuous, inclusive interval bounded by the specified <paramref name="min"/> and <paramref name="max"/> values.
+    /// discrete, inclusive interval bounded by the specified <paramref name="min"/> and <paramref name="max"/> values.
     /// </summary>
     /// <param name="i">The <see cref="Nullable{T}"/> <see cref="int"/> to validate.</param>
     /// <param name="min">The lowest value that <paramref name="i"/> may hold.</param>
