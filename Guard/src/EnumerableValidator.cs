@@ -1,3 +1,5 @@
+using Extensions;
+
 namespace Guard;
 
 /// <summary>
@@ -45,6 +47,25 @@ public sealed class EnumerableValidator<T>
         if (_elements.Any(element => element is null))
         {
             throw new ArgumentException("The provided enumerable contains null elements.", _name);
+        }
+        return this;
+    }
+
+    /// <summary>
+    /// Verifies that every element from the <see cref="IEnumerable{T}"/> supplied to this <c>EnumerableValidator</c>
+    /// satisfies the specified <paramref name="precondition"/>.
+    /// </summary>
+    /// <param name="precondition">A function from <typeparamref name="T"/> to <see cref="bool"/>.</param>
+    /// <param name="message">A natural language characterization of the way in which the specified <paramref name="precondition"/>
+    /// fails.</param>
+    /// <returns>This <c>EnumerableValidator</c>.</returns>
+    /// <exception cref="ArgumentException">If any element from the <see cref="IEnumerable{T}"/> supplied to this
+    /// <c>EnumerableValidator</c> does not satisfy the specified <paramref name="precondition"/>.</exception>
+    public EnumerableValidator<T> AnyViolation(Func<T, bool> precondition, string? message = null)
+    {
+        if (_elements.NotAll(precondition))
+        {
+            throw new ArgumentException(message, _name);
         }
         return this;
     }
