@@ -1,4 +1,4 @@
-﻿using Extensions;
+﻿using Extra.Extensions;
 
 namespace Guard;
 
@@ -20,11 +20,7 @@ public static class Against
     /// <paramref name="target"/> <see cref="Type"/>.</exception>
     public static Type InvalidType(Type type, Type target, string? name = null)
     {
-        if (type.IsAssignableTo(GetCandidate(type, target)))
-        {
-            return type;
-        }
-        throw new ArgumentException($"The provided type does not extend {target.Name}.", name);
+        return type.IsAssignableTo(GetCandidate(type, target)) ? type : throw new ArgumentException($"The provided type does not extend {target.Name}.", name);
     }
 
     private static Type GetCandidate(Type type, Type target)
@@ -68,11 +64,7 @@ public static class Against
     /// whitespace characters.</exception>
     public static string NullOrWhitespace(string s, string? name = null)
     {
-        if (string.IsNullOrWhiteSpace(s))
-        {
-            throw new ArgumentException("The provided string is null, empty, or whitespace.", name);
-        }
-        return s;
+        return string.IsNullOrWhiteSpace(s) ? throw new ArgumentException("The provided string is null, empty, or whitespace.", name) : s;
     }
 
     /// <summary>
@@ -84,11 +76,7 @@ public static class Against
     /// <exception cref="ArgumentException">If <paramref name="i"/> is less than zero.</exception>
     public static int Negative(int i, string? name = null)
     {
-        if (int.IsNegative(i))
-        {
-            throw new ArgumentException("The provided integer is negative.", name);
-        }
-        return i;
+        return int.IsNegative(i) ? throw new ArgumentException("The provided integer is negative.", name) : i;
     }
 
     /// <summary>
@@ -117,11 +105,11 @@ public static class Against
     /// greater than <paramref name="max"/>.</exception>
     public static int OutOfRange(int i, int min, int max, string? name = null)
     {
-        if (i < min || i > max)
-        {
-            throw new ArgumentOutOfRangeException($"{i} is not between {min} (inclusive) and {max} (exclusive).", name);
-        }
-        return i;
+        return i < min || i > max
+            ? throw new ArgumentOutOfRangeException(
+                $"{i} is not between {min} (inclusive) and {max} (exclusive).",
+                name)
+            : i;
     }
 
     /// <summary>
@@ -149,11 +137,7 @@ public static class Against
     /// <exception cref="ArgumentException">If <paramref name="d"/> is less than zero.</exception>
     public static double Negative(double d, string? name = null)
     {
-        if (double.IsNegative(d))
-        {
-            throw new ArgumentException("The provided double is negative.", name);
-        }
-        return d;
+        return double.IsNegative(d) ? throw new ArgumentException("The provided double is negative.", name) : d;
     }
 
     /// <summary>
@@ -182,11 +166,11 @@ public static class Against
     /// greater than <paramref name="max"/>.</exception>
     public static double OutOfRange(double d, double min, double max, string? name = null)
     {
-        if (d < min || d > max)
-        {
-            throw new ArgumentOutOfRangeException($"{d} is not between {min} (inclusive) and {max} (exclusive).", name);
-        }
-        return d;
+        return d < min || d > max
+            ? throw new ArgumentOutOfRangeException(
+                $"{d} is not between {min} (inclusive) and {max} (exclusive).",
+                name)
+            : d;
     }
 
     /// <summary>
@@ -219,11 +203,7 @@ public static class Against
     /// name="min"/>.</exception>
     public static T LessThan<T>(T t, T min, string? name = null) where T : IComparable<T>
     {
-        if (t.IsLessThan(min))
-        {
-            throw new ArgumentException($"The provided object compares less than {min}.", name);
-        }
-        return t;
+        return t.IsLessThan(min) ? throw new ArgumentException($"The provided object compares less than {min}.", name) : t;
     }
 
     /// <summary>
@@ -240,11 +220,7 @@ public static class Against
     /// name="max"/>.</exception>
     public static T GreaterThan<T>(T t, T max, string? name = null) where T : IComparable<T>
     {
-        if (t.IsGreaterThan(max))
-        {
-            throw new ArgumentException($"The provided object compares less than {max}.", name);
-        }
-        return t;
+        return t.IsGreaterThan(max) ? throw new ArgumentException($"The provided object compares less than {max}.", name) : t;
     }
 
     /// <summary>
@@ -257,11 +233,7 @@ public static class Against
     /// <exception cref="ArgumentNullException">If <paramref name="t"/> is <c>null</c>.</exception>
     public static T Null<T>(T t, string? name = null)
     {
-        if (t is null)
-        {
-            throw new ArgumentNullException(name, "The provided object is null.");
-        }
-        return t;
+        return t ?? throw new ArgumentNullException(name, "The provided object is null.");
     }
 
     /// <summary>
@@ -280,11 +252,7 @@ public static class Against
     /// does not satisfy the specified <paramref name="precondition"/>.</exception>
     public static T Violation<T>(T t, Func<T, bool> precondition, string? message = null, string? name = null)
     {
-        if (precondition(t))
-        {
-            return t;
-        }
-        throw new ArgumentException(message, name);
+        return precondition(t) ? t : throw new ArgumentException(message, name);
     }
     
     /// <summary>

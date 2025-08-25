@@ -1,4 +1,4 @@
-using Extensions;
+using Extra.Extensions;
 
 namespace Guard;
 
@@ -28,11 +28,7 @@ public sealed class EnumerableValidator<T>
     /// <c>EnumerableValidator</c> is empty.</exception>
     public EnumerableValidator<T> Empty()
     {
-        if (_elements.Count == 0)
-        {
-            throw new ArgumentException("The provided enumerable is empty.", _name);
-        }
-        return this;
+        return _elements.Count == 0 ? throw new ArgumentException("The provided enumerable is empty.", _name) : this;
     }
 
     /// <summary>
@@ -44,11 +40,7 @@ public sealed class EnumerableValidator<T>
     /// <c>EnumerableValidator</c> contains <c>null</c> elements.</exception>
     public EnumerableValidator<T> NullElements()
     {
-        if (_elements.Any(element => element is null))
-        {
-            throw new ArgumentException("The provided enumerable contains null elements.", _name);
-        }
-        return this;
+        return _elements.Any(element => element is null) ? throw new ArgumentException("The provided enumerable contains null elements.", _name) : this;
     }
 
     /// <summary>
@@ -63,11 +55,7 @@ public sealed class EnumerableValidator<T>
     /// <c>EnumerableValidator</c> does not satisfy the specified <paramref name="precondition"/>.</exception>
     public EnumerableValidator<T> AnyViolation(Func<T, bool> precondition, string? message = null)
     {
-        if (_elements.NotAll(precondition))
-        {
-            throw new ArgumentException(message, _name);
-        }
-        return this;
+        return _elements.NotAll(precondition) ? throw new ArgumentException(message, _name) : this;
     }
 
     /// <summary>
