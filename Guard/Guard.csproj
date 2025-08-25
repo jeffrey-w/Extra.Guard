@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Extensions">
-      <HintPath>..\..\Extensions\Extensions\bin\Debug\net9.0\Extensions.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Extra.Extensions" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
