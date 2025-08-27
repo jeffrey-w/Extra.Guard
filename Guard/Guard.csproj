@@ -5,10 +5,28 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Guard</Title>
+        <Authors>Jeff Wilgus</Authors>
+        <Description>A library that provides a means for verifying preconditions on function arguments.</Description>
+        <Copyright>Jeff Wilgus</Copyright>
+        <PackageProjectUrl>https://jeffrey-w.github.io/Guard/</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <RepositoryUrl>https://github.com/jeffrey-w/Guard</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIcon>logo.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Version>1.0.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Extra.Extensions" Version="1.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../LICENSE.md" Pack="true" PackagePath=""/>
+        <None Include="../README.md" Pack="true" PackagePath=""/>
+        <None Include="../logo.png" Pack="true" PackagePath=""/>
     </ItemGroup>
 
 </Project>
