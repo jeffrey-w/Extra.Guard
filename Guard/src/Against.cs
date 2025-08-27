@@ -305,8 +305,7 @@ public static class Against
     /// <param name="name">The identifier for the parameter being validated.</param>
     /// <returns><paramref name="t" />, if it is not <c>null</c>.</returns>
     /// <exception cref="ArgumentNullException">
-    /// If <paramref name="t" /> is <c>null</c>
-    /// .
+    /// If <paramref name="t" /> is <c>null</c>.
     /// </exception>
     public static T Null<T>(T t, string? name = null)
     {
@@ -315,8 +314,7 @@ public static class Against
 
     /// <summary>
     /// Verifies that the specified element from <typeparamref name="T" />,
-    /// <paramref name="t" />, satisfies the specified <paramref name="precondition" />
-    /// .
+    /// <paramref name="t" />, satisfies the specified <paramref name="precondition" />.
     /// </summary>
     /// <typeparam name="T">The <see cref="Type" /> of argument being validated.</typeparam>
     /// <param name="t">The element from <typeparamref name="T" /> to validate.</param>
@@ -339,6 +337,110 @@ public static class Against
     public static T Violation<T>(T t, Func<T, bool> precondition, string? message = null, string? name = null)
     {
         return precondition(t) ? t : throw new ArgumentException(message, name);
+    }
+
+    /// <summary>
+    /// Verifies that the specified <paramref name="enumerable" /> emits at least one
+    /// element.
+    /// </summary>
+    /// <remarks>
+    /// The specified <paramref name="enumerable" /> is evaluated before it is
+    /// validated.
+    /// </remarks>
+    /// <typeparam name="T">
+    /// The type of element held by the specified <paramref name="enumerable" />.
+    /// </typeparam>
+    /// <param name="enumerable">The <see cref="IEnumerable{T}" /> to validate.</param>
+    /// <param name="suppressExceptions">
+    /// If <c>true</c>, any <see cref="Exception" />s thrown while evaluating the
+    /// specified <paramref name="enumerable" /> are caught and ignored.
+    /// </param>
+    /// <param name="name">The identifier for the parameter being validated.</param>
+    /// <returns>
+    /// The specified <paramref name="enumerable" />, if it emits at least one element.
+    /// </returns>
+    /// <exception cref="ArgumentException">
+    /// If the specified <paramref name="enumerable" /> emits no elements.
+    /// </exception>
+    public static IEnumerable<T> Empty<T>(
+        IEnumerable<T> enumerable,
+        bool suppressExceptions = false,
+        string? name = null)
+    {
+        return InvalidEnumerable(enumerable, suppressExceptions, name)
+              .Empty()
+              .Validated();
+    }
+
+    /// <summary>
+    /// Verifies that the specified <paramref name="enumerable" /> emits no <c>null</c>
+    /// elements.
+    /// </summary>
+    /// <remarks>
+    /// The specified <paramref name="enumerable" /> is evaluated before it is
+    /// validated.
+    /// </remarks>
+    /// <typeparam name="T">
+    /// The type of element held by the specified <paramref name="enumerable" />.
+    /// </typeparam>
+    /// <param name="enumerable">The <see cref="IEnumerable{T}" /> to validate.</param>
+    /// <param name="suppressExceptions">
+    /// If <c>true</c>, any <see cref="Exception" />s thrown while evaluating the
+    /// specified <paramref name="enumerable" /> are caught and ignored.
+    /// </param>
+    /// <param name="name">The identifier for the parameter being validated.</param>
+    /// <returns>
+    /// The specified <paramref name="enumerable" />, if it emits no <c>null</c>
+    /// elements.
+    /// </returns>
+    /// <exception cref="ArgumentException">
+    /// If the specified <paramref name="enumerable" /> emits at least one <c>null</c>
+    /// element.
+    /// </exception>
+    public static IEnumerable<T> NullElements<T>(
+        IEnumerable<T> enumerable,
+        bool suppressExceptions = false,
+        string? name = null)
+    {
+        return InvalidEnumerable(enumerable, suppressExceptions, name)
+              .NullElements()
+              .Validated();
+    }
+
+    /// <summary>
+    /// Verifies that the specified <paramref name="enumerable" /> emits at least one
+    /// element and no <c>null</c> elements.
+    /// </summary>
+    /// <remarks>
+    /// The specified <paramref name="enumerable" /> is evaluated before it is
+    /// validated.
+    /// </remarks>
+    /// <typeparam name="T">
+    /// The type of element held by the specified <paramref name="enumerable" />.
+    /// </typeparam>
+    /// <param name="enumerable">The <see cref="IEnumerable{T}" /> to validate.</param>
+    /// <param name="suppressExceptions">
+    /// If <c>true</c>, any <see cref="Exception" />s thrown while evaluating the
+    /// specified <paramref name="enumerable" /> are caught and ignored.
+    /// </param>
+    /// <param name="name">The identifier for the parameter being validated.</param>
+    /// <returns>
+    /// The specified <paramref name="enumerable" />, if it emits at least one element
+    /// and no <c>null</c> elements.
+    /// </returns>
+    /// <exception cref="ArgumentException">
+    /// If the specified <paramref name="enumerable" /> emits no elements or at least
+    /// one <c>null</c> element.
+    /// </exception>
+    public static IEnumerable<T> EmptyOrNullElements<T>(
+        IEnumerable<T> enumerable,
+        bool suppressExceptions = false,
+        string? name = null)
+    {
+        return InvalidEnumerable(enumerable, suppressExceptions, name)
+              .Empty()
+              .NullElements()
+              .Validated();
     }
 
     /// <summary>
