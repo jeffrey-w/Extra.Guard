@@ -1,0 +1,13 @@
+### YamlMime:TableOfContent
+items:
+- uid: Extra.Guard
+  name: Extra.Guard
+  type: Namespace
+  items:
+  - uid: Extra.Guard.Against
+    name: Against
+    type: Class
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator<T>
+    type: Class
+memberLayout: SamePage

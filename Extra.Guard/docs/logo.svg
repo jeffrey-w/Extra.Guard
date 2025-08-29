@@ -1,4 +1,4 @@
-<svg width="512" height="512" viewBox="0 -32 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="40" height="40" viewBox="24 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_5_6)">
 <g clip-path="url(#paint0_diamond_5_6_clip_path)"><g transform="matrix(-0.2185 0 0 -0.7955 250.703 255.5)"><rect x="0" y="0" width="1019.23" height="275.927" fill="url(#paint0_diamond_5_6)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1019.23" height="275.927" transform="scale(1 -1)" fill="url(#paint0_diamond_5_6)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1019.23" height="275.927" transform="scale(-1 1)" fill="url(#paint0_diamond_5_6)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1019.23" height="275.927" transform="scale(-1)" fill="url(#paint0_diamond_5_6)" opacity="1" shape-rendering="crispEdges"/></g></g><path d="M250.703 474L167.203 402L83.7025 330C83.7025 330 29 280 29 216C29 152 29 90 29 90L139.851 63.5L250.703 37L361.554 63.5L472.405 90C472.405 90 472.405 160 472.405 216C472.405 272 416.703 330 416.703 330L250.703 474Z"/>
 </g>

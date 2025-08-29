@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Extra.Guard
+  commentId: N:Extra.Guard
+  id: Extra.Guard
+  children:
+  - Extra.Guard.Against
+  - Extra.Guard.EnumerableValidator`1
+  langs:
+  - csharp
+  - vb
+  name: Extra.Guard
+  nameWithType: Extra.Guard
+  fullName: Extra.Guard
+  type: Namespace
+  assemblies:
+  - Extra.Guard
+references:
+- uid: Extra.Guard.Against
+  commentId: T:Extra.Guard.Against
+  href: Extra.Guard.Against.html
+  name: Against
+  nameWithType: Against
+  fullName: Extra.Guard.Against
+- uid: Extra.Guard.EnumerableValidator`1
+  commentId: T:Extra.Guard.EnumerableValidator`1
+  parent: Extra.Guard
+  href: Extra.Guard.EnumerableValidator-1.html
+  name: EnumerableValidator<T>
+  nameWithType: EnumerableValidator<T>
+  fullName: Extra.Guard.EnumerableValidator<T>
+  nameWithType.vb: EnumerableValidator(Of T)
+  fullName.vb: Extra.Guard.EnumerableValidator(Of T)
+  name.vb: EnumerableValidator(Of T)
+  spec.csharp:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Extra.Guard
+  commentId: N:Extra.Guard
+  href: Extra.html
+  name: Extra.Guard
+  nameWithType: Extra.Guard
+  fullName: Extra.Guard
+  spec.csharp:
+  - uid: Extra
+    name: Extra
+    href: Extra.html
+  - name: .
+  - uid: Extra.Guard
+    name: Guard
+    href: Extra.Guard.html
+  spec.vb:
+  - uid: Extra
+    name: Extra
+    href: Extra.html
+  - name: .
+  - uid: Extra.Guard
+    name: Guard
+    href: Extra.Guard.html

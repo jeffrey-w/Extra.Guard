@@ -1,0 +1,1869 @@
+### YamlMime:ManagedReference
+items:
+- uid: Extra.Guard.Against
+  commentId: T:Extra.Guard.Against
+  id: Against
+  parent: Extra.Guard
+  children:
+  - Extra.Guard.Against.EmptyOrNullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  - Extra.Guard.Against.Empty``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  - Extra.Guard.Against.GreaterThan``1(``0,``0,System.String)
+  - Extra.Guard.Against.InvalidEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  - Extra.Guard.Against.InvalidType(System.Type,System.Type,System.String)
+  - Extra.Guard.Against.InvalidType``1(System.Type,System.String)
+  - Extra.Guard.Against.LessThan``1(``0,``0,System.String)
+  - Extra.Guard.Against.Negative(System.Double,System.String)
+  - Extra.Guard.Against.Negative(System.Int32,System.String)
+  - Extra.Guard.Against.Negative(System.Nullable{System.Double},System.String)
+  - Extra.Guard.Against.Negative(System.Nullable{System.Int32},System.String)
+  - Extra.Guard.Against.NullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  - Extra.Guard.Against.NullOrWhitespace(System.String,System.String)
+  - Extra.Guard.Against.Null``1(``0,System.String)
+  - Extra.Guard.Against.OutOfRange(System.Double,System.Double,System.Double,System.String)
+  - Extra.Guard.Against.OutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+  - Extra.Guard.Against.OutOfRange(System.Nullable{System.Double},System.Double,System.Double,System.String)
+  - Extra.Guard.Against.OutOfRange(System.Nullable{System.Int32},System.Int32,System.Int32,System.String)
+  - Extra.Guard.Against.Violation``1(``0,System.Func{``0,System.Boolean},System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Against
+  nameWithType: Against
+  fullName: Extra.Guard.Against
+  type: Class
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Against
+    path: ../src/Against.cs
+    startLine: 8
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    The <code>Against</code> class provides utility methods for preventing violations to
+
+    preconditions over function arguments.
+  example: []
+  syntax:
+    content: public static class Against
+    content.vb: Public Module Against
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Extra.Guard.Against.InvalidType(System.Type,System.Type,System.String)
+  commentId: M:Extra.Guard.Against.InvalidType(System.Type,System.Type,System.String)
+  id: InvalidType(System.Type,System.Type,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: InvalidType(Type, Type, string?)
+  nameWithType: Against.InvalidType(Type, Type, string?)
+  fullName: Extra.Guard.Against.InvalidType(System.Type, System.Type, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: InvalidType
+    path: ../src/Against.cs
+    startLine: 27
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <code class="paramref">type</code> is assignable to the
+
+    specified <code class="paramref">target</code> <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Type InvalidType(Type type, Type target, string? name = null)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: target
+      type: System.Type
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> from which the one specified must derive.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Type
+      description: >-
+        The specified <code class="paramref">type</code> if it is assignable to the specified
+
+        <code class="paramref">target</code> <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function InvalidType(type As Type, target As Type, name As String = Nothing) As Type
+  overload: Extra.Guard.Against.InvalidType*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the specified <code class="paramref">type</code> is not assignable to the specified
+
+      <code class="paramref">target</code> <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Against.InvalidType(Type, Type, String)
+  fullName.vb: Extra.Guard.Against.InvalidType(System.Type, System.Type, String)
+  name.vb: InvalidType(Type, Type, String)
+- uid: Extra.Guard.Against.InvalidType``1(System.Type,System.String)
+  commentId: M:Extra.Guard.Against.InvalidType``1(System.Type,System.String)
+  id: InvalidType``1(System.Type,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: InvalidType<TTarget>(Type, string?)
+  nameWithType: Against.InvalidType<TTarget>(Type, string?)
+  fullName: Extra.Guard.Against.InvalidType<TTarget>(System.Type, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: InvalidType
+    path: ../src/Against.cs
+    startLine: 66
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <code class="paramref">type</code> is assignable to
+
+    <code class="typeparamref">TTarget</code>.
+  example: []
+  syntax:
+    content: public static Type InvalidType<TTarget>(Type type, string? name = null)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: TTarget
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> from which the one specified must derive.
+    return:
+      type: System.Type
+      description: >-
+        The specified <code class="paramref">type</code> if it is assignable to
+
+        <code class="typeparamref">TTarget</code>.
+    content.vb: Public Shared Function InvalidType(Of TTarget)(type As Type, name As String = Nothing) As Type
+  overload: Extra.Guard.Against.InvalidType*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the specified <code class="paramref">type</code> is not assignable to
+
+      <code class="typeparamref">TTarget</code>.
+  nameWithType.vb: Against.InvalidType(Of TTarget)(Type, String)
+  fullName.vb: Extra.Guard.Against.InvalidType(Of TTarget)(System.Type, String)
+  name.vb: InvalidType(Of TTarget)(Type, String)
+- uid: Extra.Guard.Against.NullOrWhitespace(System.String,System.String)
+  commentId: M:Extra.Guard.Against.NullOrWhitespace(System.String,System.String)
+  id: NullOrWhitespace(System.String,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: NullOrWhitespace(string, string?)
+  nameWithType: Against.NullOrWhitespace(string, string?)
+  fullName: Extra.Guard.Against.NullOrWhitespace(string, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: NullOrWhitespace
+    path: ../src/Against.cs
+    startLine: 85
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.String" data-throw-if-not-resolved="false"></xref>, <code class="paramref">s</code>, is
+
+    not <code>null</code>, the empty string, or composed solely of whitespace characters.
+  example: []
+  syntax:
+    content: public static string NullOrWhitespace(string s, string? name = null)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to validate
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.String
+      description: >-
+        <code class="paramref">s</code> if it is neither <code>null</code>, empty, nor composed solely
+
+        of whitespace characters.
+    content.vb: Public Shared Function NullOrWhitespace(s As String, name As String = Nothing) As String
+  overload: Extra.Guard.Against.NullOrWhitespace*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If <code class="paramref">s</code> is either <code>null</code>, empty, or composed solely of
+
+      whitespace characters.
+  nameWithType.vb: Against.NullOrWhitespace(String, String)
+  fullName.vb: Extra.Guard.Against.NullOrWhitespace(String, String)
+  name.vb: NullOrWhitespace(String, String)
+- uid: Extra.Guard.Against.Negative(System.Int32,System.String)
+  commentId: M:Extra.Guard.Against.Negative(System.Int32,System.String)
+  id: Negative(System.Int32,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Negative(int, string?)
+  nameWithType: Against.Negative(int, string?)
+  fullName: Extra.Guard.Against.Negative(int, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Negative
+    path: ../src/Against.cs
+    startLine: 102
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <code class="paramref">i</code>, is
+
+    greater than or equal to zero.
+  example: []
+  syntax:
+    content: public static int Negative(int i, string? name = null)
+    parameters:
+    - id: i
+      type: System.Int32
+      description: The <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Int32
+      description: <code class="paramref">i</code> if it is greater than or equal to zero.
+    content.vb: Public Shared Function Negative(i As Integer, name As String = Nothing) As Integer
+  overload: Extra.Guard.Against.Negative*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">i</code> is less than zero.
+  nameWithType.vb: Against.Negative(Integer, String)
+  fullName.vb: Extra.Guard.Against.Negative(Integer, String)
+  name.vb: Negative(Integer, String)
+- uid: Extra.Guard.Against.Negative(System.Nullable{System.Int32},System.String)
+  commentId: M:Extra.Guard.Against.Negative(System.Nullable{System.Int32},System.String)
+  id: Negative(System.Nullable{System.Int32},System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Negative(int?, string?)
+  nameWithType: Against.Negative(int?, string?)
+  fullName: Extra.Guard.Against.Negative(int?, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Negative
+    path: ../src/Against.cs
+    startLine: 119
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>,
+
+    <code class="paramref">i</code>, is greater than or equal to zero or <code>null</code>.
+  example: []
+  syntax:
+    content: public static int? Negative(int? i, string? name = null)
+    parameters:
+    - id: i
+      type: System.Nullable{System.Int32}
+      description: The <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Nullable{System.Int32}
+      description: <code class="paramref">i</code> if it is greater than or equal to zero or <code>null</code>.
+    content.vb: Public Shared Function Negative(i As Integer?, name As String = Nothing) As Integer?
+  overload: Extra.Guard.Against.Negative*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">i</code> is less than zero.
+  nameWithType.vb: Against.Negative(Integer?, String)
+  fullName.vb: Extra.Guard.Against.Negative(Integer?, String)
+  name.vb: Negative(Integer?, String)
+- uid: Extra.Guard.Against.OutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:Extra.Guard.Against.OutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+  id: OutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: OutOfRange(int, int, int, string?)
+  nameWithType: Against.OutOfRange(int, int, int, string?)
+  fullName: Extra.Guard.Against.OutOfRange(int, int, int, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: OutOfRange
+    path: ../src/Against.cs
+    startLine: 138
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <code class="paramref">i</code>, is on
+
+    the discrete, inclusive interval bounded by the specified
+
+    <code class="paramref">min</code> and <code class="paramref">max</code> values.
+  example: []
+  syntax:
+    content: public static int OutOfRange(int i, int min, int max, string? name = null)
+    parameters:
+    - id: i
+      type: System.Int32
+      description: The <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: min
+      type: System.Int32
+      description: The lowest value that <code class="paramref">i</code> may hold.
+    - id: max
+      type: System.Int32
+      description: The highest value that <code class="paramref">i</code> may hold.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Int32
+      description: <code class="paramref">i</code> if it is on the defined interval.
+    content.vb: Public Shared Function OutOfRange(i As Integer, min As Integer, max As Integer, name As String = Nothing) As Integer
+  overload: Extra.Guard.Against.OutOfRange*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      If <code class="paramref">i</code> is less than <code class="paramref">min</code> or greater than
+
+      <code class="paramref">max</code>.
+  nameWithType.vb: Against.OutOfRange(Integer, Integer, Integer, String)
+  fullName.vb: Extra.Guard.Against.OutOfRange(Integer, Integer, Integer, String)
+  name.vb: OutOfRange(Integer, Integer, Integer, String)
+- uid: Extra.Guard.Against.OutOfRange(System.Nullable{System.Int32},System.Int32,System.Int32,System.String)
+  commentId: M:Extra.Guard.Against.OutOfRange(System.Nullable{System.Int32},System.Int32,System.Int32,System.String)
+  id: OutOfRange(System.Nullable{System.Int32},System.Int32,System.Int32,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: OutOfRange(int?, int, int, string?)
+  nameWithType: Against.OutOfRange(int?, int, int, string?)
+  fullName: Extra.Guard.Against.OutOfRange(int?, int, int, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: OutOfRange
+    path: ../src/Against.cs
+    startLine: 165
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>,
+
+    <code class="paramref">i</code>, is on the discrete, inclusive interval bounded by the
+
+    specified <code class="paramref">min</code> and <code class="paramref">max</code> values.
+  example: []
+  syntax:
+    content: public static int? OutOfRange(int? i, int min, int max, string? name = null)
+    parameters:
+    - id: i
+      type: System.Nullable{System.Int32}
+      description: The <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: min
+      type: System.Int32
+      description: The lowest value that <code class="paramref">i</code> may hold.
+    - id: max
+      type: System.Int32
+      description: The highest value that <code class="paramref">i</code> may hold.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Nullable{System.Int32}
+      description: <code class="paramref">i</code> if it is on the defined interval, or if it is <code>null</code>.
+    content.vb: Public Shared Function OutOfRange(i As Integer?, min As Integer, max As Integer, name As String = Nothing) As Integer?
+  overload: Extra.Guard.Against.OutOfRange*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      If <code class="paramref">i</code> is less than <code class="paramref">min</code> or greater than
+
+      <code class="paramref">max</code>.
+  nameWithType.vb: Against.OutOfRange(Integer?, Integer, Integer, String)
+  fullName.vb: Extra.Guard.Against.OutOfRange(Integer?, Integer, Integer, String)
+  name.vb: OutOfRange(Integer?, Integer, Integer, String)
+- uid: Extra.Guard.Against.Negative(System.Double,System.String)
+  commentId: M:Extra.Guard.Against.Negative(System.Double,System.String)
+  id: Negative(System.Double,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Negative(double, string?)
+  nameWithType: Against.Negative(double, string?)
+  fullName: Extra.Guard.Against.Negative(double, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Negative
+    path: ../src/Against.cs
+    startLine: 180
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, <code class="paramref">d</code>, is
+
+    greater than or equal to zero.
+  example: []
+  syntax:
+    content: public static double Negative(double d, string? name = null)
+    parameters:
+    - id: d
+      type: System.Double
+      description: The <xref href="System.Double" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Double
+      description: <code class="paramref">d</code> if it is greater than or equal to zero.
+    content.vb: Public Shared Function Negative(d As Double, name As String = Nothing) As Double
+  overload: Extra.Guard.Against.Negative*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">d</code> is less than zero.
+  nameWithType.vb: Against.Negative(Double, String)
+  fullName.vb: Extra.Guard.Against.Negative(Double, String)
+  name.vb: Negative(Double, String)
+- uid: Extra.Guard.Against.Negative(System.Nullable{System.Double},System.String)
+  commentId: M:Extra.Guard.Against.Negative(System.Nullable{System.Double},System.String)
+  id: Negative(System.Nullable{System.Double},System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Negative(double?, string?)
+  nameWithType: Against.Negative(double?, string?)
+  fullName: Extra.Guard.Against.Negative(double?, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Negative
+    path: ../src/Against.cs
+    startLine: 195
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Double" data-throw-if-not-resolved="false"></xref>,
+
+    <code class="paramref">d</code>, is greater than or equal to zero or <code>null</code>.
+  example: []
+  syntax:
+    content: public static double? Negative(double? d, string? name = null)
+    parameters:
+    - id: d
+      type: System.Nullable{System.Double}
+      description: The <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Nullable{System.Double}
+      description: <code class="paramref">d</code> if it is greater than or equal to zero or <code>null</code>.
+    content.vb: Public Shared Function Negative(d As Double?, name As String = Nothing) As Double?
+  overload: Extra.Guard.Against.Negative*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">d</code> is less than zero.
+  nameWithType.vb: Against.Negative(Double?, String)
+  fullName.vb: Extra.Guard.Against.Negative(Double?, String)
+  name.vb: Negative(Double?, String)
+- uid: Extra.Guard.Against.OutOfRange(System.Double,System.Double,System.Double,System.String)
+  commentId: M:Extra.Guard.Against.OutOfRange(System.Double,System.Double,System.Double,System.String)
+  id: OutOfRange(System.Double,System.Double,System.Double,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: OutOfRange(double, double, double, string?)
+  nameWithType: Against.OutOfRange(double, double, double, string?)
+  fullName: Extra.Guard.Against.OutOfRange(double, double, double, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: OutOfRange
+    path: ../src/Against.cs
+    startLine: 214
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, <code class="paramref">d</code>, is on
+
+    the continuous, inclusive interval bounded by the specified
+
+    <code class="paramref">min</code> and <code class="paramref">max</code> values.
+  example: []
+  syntax:
+    content: public static double OutOfRange(double d, double min, double max, string? name = null)
+    parameters:
+    - id: d
+      type: System.Double
+      description: The <xref href="System.Double" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: min
+      type: System.Double
+      description: The lowest value that <code class="paramref">d</code> may hold.
+    - id: max
+      type: System.Double
+      description: The highest value that <code class="paramref">d</code> may hold.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Double
+      description: <code class="paramref">d</code> if it is on the defined interval.
+    content.vb: Public Shared Function OutOfRange(d As Double, min As Double, max As Double, name As String = Nothing) As Double
+  overload: Extra.Guard.Against.OutOfRange*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      If <code class="paramref">d</code> is less than <code class="paramref">min</code> or greater than
+
+      <code class="paramref">max</code>.
+  nameWithType.vb: Against.OutOfRange(Double, Double, Double, String)
+  fullName.vb: Extra.Guard.Against.OutOfRange(Double, Double, Double, String)
+  name.vb: OutOfRange(Double, Double, Double, String)
+- uid: Extra.Guard.Against.OutOfRange(System.Nullable{System.Double},System.Double,System.Double,System.String)
+  commentId: M:Extra.Guard.Against.OutOfRange(System.Nullable{System.Double},System.Double,System.Double,System.String)
+  id: OutOfRange(System.Nullable{System.Double},System.Double,System.Double,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: OutOfRange(double?, double, double, string?)
+  nameWithType: Against.OutOfRange(double?, double, double, string?)
+  fullName: Extra.Guard.Against.OutOfRange(double?, double, double, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: OutOfRange
+    path: ../src/Against.cs
+    startLine: 241
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Double" data-throw-if-not-resolved="false"></xref>,
+
+    <code class="paramref">d</code>, is on the continuous, inclusive interval bounded by the
+
+    specified <code class="paramref">min</code> and <code class="paramref">max</code> values.
+  example: []
+  syntax:
+    content: public static double? OutOfRange(double? d, double min, double max, string? name = null)
+    parameters:
+    - id: d
+      type: System.Nullable{System.Double}
+      description: The <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> <xref href="System.Double" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: min
+      type: System.Double
+      description: The lowest value that <code class="paramref">d</code> may hold.
+    - id: max
+      type: System.Double
+      description: The highest value that <code class="paramref">d</code> may hold.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    return:
+      type: System.Nullable{System.Double}
+      description: <code class="paramref">d</code> if it is on the defined interval, or if it is <code>null</code>.
+    content.vb: Public Shared Function OutOfRange(d As Double?, min As Double, max As Double, name As String = Nothing) As Double?
+  overload: Extra.Guard.Against.OutOfRange*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      If <code class="paramref">d</code> is less than <code class="paramref">min</code> or greater than
+
+      <code class="paramref">max</code>.
+  nameWithType.vb: Against.OutOfRange(Double?, Double, Double, String)
+  fullName.vb: Extra.Guard.Against.OutOfRange(Double?, Double, Double, String)
+  name.vb: OutOfRange(Double?, Double, Double, String)
+- uid: Extra.Guard.Against.LessThan``1(``0,``0,System.String)
+  commentId: M:Extra.Guard.Against.LessThan``1(``0,``0,System.String)
+  id: LessThan``1(``0,``0,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: LessThan<T>(T, T, string?)
+  nameWithType: Against.LessThan<T>(T, T, string?)
+  fullName: Extra.Guard.Against.LessThan<T>(T, T, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: LessThan
+    path: ../src/Against.cs
+    startLine: 265
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified element from <code class="typeparamref">T</code>,
+
+    <code class="paramref">t</code>, is greater than or equal to the specified
+
+    <code class="paramref">min</code> element.
+  example: []
+  syntax:
+    content: 'public static T LessThan<T>(T t, T min, string? name = null) where T : IComparable<T>'
+    parameters:
+    - id: t
+      type: '{T}'
+      description: The element from <code class="typeparamref">T</code> to validate.
+    - id: min
+      type: '{T}'
+      description: >-
+        The element from <code class="typeparamref">T</code> to validate <code class="paramref">t</code>
+
+        against.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of argument being validated.
+    return:
+      type: '{T}'
+      description: >-
+        <code class="paramref">t</code> if it is greater than or equal to the specified
+
+        <code class="paramref">min</code>.
+    content.vb: Public Shared Function LessThan(Of T As IComparable(Of T))(t As T, min As T, name As String = Nothing) As T
+  overload: Extra.Guard.Against.LessThan*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">t</code> is less than the specified <code class="paramref">min</code>.
+  nameWithType.vb: Against.LessThan(Of T)(T, T, String)
+  fullName.vb: Extra.Guard.Against.LessThan(Of T)(T, T, String)
+  name.vb: LessThan(Of T)(T, T, String)
+- uid: Extra.Guard.Against.GreaterThan``1(``0,``0,System.String)
+  commentId: M:Extra.Guard.Against.GreaterThan``1(``0,``0,System.String)
+  id: GreaterThan``1(``0,``0,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan<T>(T, T, string?)
+  nameWithType: Against.GreaterThan<T>(T, T, string?)
+  fullName: Extra.Guard.Against.GreaterThan<T>(T, T, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: GreaterThan
+    path: ../src/Against.cs
+    startLine: 291
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified element from <code class="typeparamref">T</code>,
+
+    <code class="paramref">t</code>, is less than or equal to the specified
+
+    <code class="paramref">max</code> element.
+  example: []
+  syntax:
+    content: 'public static T GreaterThan<T>(T t, T max, string? name = null) where T : IComparable<T>'
+    parameters:
+    - id: t
+      type: '{T}'
+      description: The element from <code class="typeparamref">T</code> to validate.
+    - id: max
+      type: '{T}'
+      description: >-
+        The element from <code class="typeparamref">T</code> to validate <code class="paramref">t</code>
+
+        against.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of argument being validated.
+    return:
+      type: '{T}'
+      description: >-
+        <code class="paramref">t</code> if it is less than or equal to the specified
+
+        <code class="paramref">max</code>.
+    content.vb: Public Shared Function GreaterThan(Of T As IComparable(Of T))(t As T, max As T, name As String = Nothing) As T
+  overload: Extra.Guard.Against.GreaterThan*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">t</code> is greater than the specified <code class="paramref">max</code>.
+  nameWithType.vb: Against.GreaterThan(Of T)(T, T, String)
+  fullName.vb: Extra.Guard.Against.GreaterThan(Of T)(T, T, String)
+  name.vb: GreaterThan(Of T)(T, T, String)
+- uid: Extra.Guard.Against.Null``1(``0,System.String)
+  commentId: M:Extra.Guard.Against.Null``1(``0,System.String)
+  id: Null``1(``0,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Null<T>(T, string?)
+  nameWithType: Against.Null<T>(T, string?)
+  fullName: Extra.Guard.Against.Null<T>(T, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: "Null"
+    path: ../src/Against.cs
+    startLine: 309
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified element from <code class="typeparamref">T</code>,
+
+    <code class="paramref">t</code>, is not <code>null</code>.
+  example: []
+  syntax:
+    content: public static T Null<T>(T t, string? name = null)
+    parameters:
+    - id: t
+      type: '{T}'
+      description: The element from <code class="typeparamref">T</code> to validate.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of argument being validated.
+    return:
+      type: '{T}'
+      description: <code class="paramref">t</code>, if it is not <code>null</code>.
+    content.vb: Public Shared Function Null(Of T)(t As T, name As String = Nothing) As T
+  overload: Extra.Guard.Against.Null*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If <code class="paramref">t</code> is <code>null</code>.
+  nameWithType.vb: Against.Null(Of T)(T, String)
+  fullName.vb: Extra.Guard.Against.Null(Of T)(T, String)
+  name.vb: Null(Of T)(T, String)
+- uid: Extra.Guard.Against.Violation``1(``0,System.Func{``0,System.Boolean},System.String,System.String)
+  commentId: M:Extra.Guard.Against.Violation``1(``0,System.Func{``0,System.Boolean},System.String,System.String)
+  id: Violation``1(``0,System.Func{``0,System.Boolean},System.String,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Violation<T>(T, Func<T, bool>, string?, string?)
+  nameWithType: Against.Violation<T>(T, Func<T, bool>, string?, string?)
+  fullName: Extra.Guard.Against.Violation<T>(T, System.Func<T, bool>, string?, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Violation
+    path: ../src/Against.cs
+    startLine: 336
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified element from <code class="typeparamref">T</code>,
+
+    <code class="paramref">t</code>, satisfies the specified <code class="paramref">precondition</code>.
+  example: []
+  syntax:
+    content: public static T Violation<T>(T t, Func<T, bool> precondition, string? message = null, string? name = null)
+    parameters:
+    - id: t
+      type: '{T}'
+      description: The element from <code class="typeparamref">T</code> to validate.
+    - id: precondition
+      type: System.Func{{T},System.Boolean}
+      description: A function from <code class="typeparamref">T</code> to <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.
+    - id: message
+      type: System.String
+      description: >-
+        A natural language characterization of the way in which the specified
+
+        <code class="paramref">precondition</code> fails.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of argument being validated.
+    return:
+      type: '{T}'
+      description: >-
+        The specified element from <code class="typeparamref">T</code>, <code class="paramref">t</code>, if
+
+        it satisfies the specified <code class="paramref">precondition</code>.
+    content.vb: Public Shared Function Violation(Of T)(t As T, precondition As Func(Of T, Boolean), message As String = Nothing, name As String = Nothing) As T
+  overload: Extra.Guard.Against.Violation*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the specified element from <code class="typeparamref">T</code>, <code class="paramref">t</code>,
+
+      does not satisfy the specified <code class="paramref">precondition</code>.
+  nameWithType.vb: Against.Violation(Of T)(T, Func(Of T, Boolean), String, String)
+  fullName.vb: Extra.Guard.Against.Violation(Of T)(T, System.Func(Of T, Boolean), String, String)
+  name.vb: Violation(Of T)(T, Func(Of T, Boolean), String, String)
+- uid: Extra.Guard.Against.Empty``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  commentId: M:Extra.Guard.Against.Empty``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  id: Empty``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: Empty<T>(IEnumerable<T>, bool, string?)
+  nameWithType: Against.Empty<T>(IEnumerable<T>, bool, string?)
+  fullName: Extra.Guard.Against.Empty<T>(System.Collections.Generic.IEnumerable<T>, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: Empty
+    path: ../src/Against.cs
+    startLine: 364
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <code class="paramref">enumerable</code> emits at least one
+
+    element.
+  remarks: >-
+    The specified <code class="paramref">enumerable</code> is evaluated before it is
+
+    validated.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> Empty<T>(IEnumerable<T> enumerable, bool suppressExceptions = false, string? name = null)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: suppressExceptions
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, any <xref href="System.Exception" data-throw-if-not-resolved="false"></xref>s thrown while evaluating the
+
+        specified <code class="paramref">enumerable</code> are caught and ignored.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The type of element held by the specified <code class="paramref">enumerable</code>.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The specified <code class="paramref">enumerable</code>, if it emits at least one element.
+    content.vb: Public Shared Function Empty(Of T)(enumerable As IEnumerable(Of T), suppressExceptions As Boolean = False, name As String = Nothing) As IEnumerable(Of T)
+  overload: Extra.Guard.Against.Empty*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If the specified <code class="paramref">enumerable</code> emits no elements.
+  nameWithType.vb: Against.Empty(Of T)(IEnumerable(Of T), Boolean, String)
+  fullName.vb: Extra.Guard.Against.Empty(Of T)(System.Collections.Generic.IEnumerable(Of T), Boolean, String)
+  name.vb: Empty(Of T)(IEnumerable(Of T), Boolean, String)
+- uid: Extra.Guard.Against.NullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  commentId: M:Extra.Guard.Against.NullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  id: NullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: NullElements<T>(IEnumerable<T>, bool, string?)
+  nameWithType: Against.NullElements<T>(IEnumerable<T>, bool, string?)
+  fullName: Extra.Guard.Against.NullElements<T>(System.Collections.Generic.IEnumerable<T>, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: NullElements
+    path: ../src/Against.cs
+    startLine: 399
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <code class="paramref">enumerable</code> emits no <code>null</code>
+
+    elements.
+  remarks: >-
+    The specified <code class="paramref">enumerable</code> is evaluated before it is
+
+    validated.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> NullElements<T>(IEnumerable<T> enumerable, bool suppressExceptions = false, string? name = null)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: suppressExceptions
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, any <xref href="System.Exception" data-throw-if-not-resolved="false"></xref>s thrown while evaluating the
+
+        specified <code class="paramref">enumerable</code> are caught and ignored.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The type of element held by the specified <code class="paramref">enumerable</code>.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The specified <code class="paramref">enumerable</code>, if it emits no <code>null</code>
+
+        elements.
+    content.vb: Public Shared Function NullElements(Of T)(enumerable As IEnumerable(Of T), suppressExceptions As Boolean = False, name As String = Nothing) As IEnumerable(Of T)
+  overload: Extra.Guard.Against.NullElements*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the specified <code class="paramref">enumerable</code> emits at least one <code>null</code>
+
+      element.
+  nameWithType.vb: Against.NullElements(Of T)(IEnumerable(Of T), Boolean, String)
+  fullName.vb: Extra.Guard.Against.NullElements(Of T)(System.Collections.Generic.IEnumerable(Of T), Boolean, String)
+  name.vb: NullElements(Of T)(IEnumerable(Of T), Boolean, String)
+- uid: Extra.Guard.Against.EmptyOrNullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  commentId: M:Extra.Guard.Against.EmptyOrNullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  id: EmptyOrNullElements``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: EmptyOrNullElements<T>(IEnumerable<T>, bool, string?)
+  nameWithType: Against.EmptyOrNullElements<T>(IEnumerable<T>, bool, string?)
+  fullName: Extra.Guard.Against.EmptyOrNullElements<T>(System.Collections.Generic.IEnumerable<T>, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: EmptyOrNullElements
+    path: ../src/Against.cs
+    startLine: 434
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Verifies that the specified <code class="paramref">enumerable</code> emits at least one
+
+    element and no <code>null</code> elements.
+  remarks: >-
+    The specified <code class="paramref">enumerable</code> is evaluated before it is
+
+    validated.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> EmptyOrNullElements<T>(IEnumerable<T> enumerable, bool suppressExceptions = false, string? name = null)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: suppressExceptions
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, any <xref href="System.Exception" data-throw-if-not-resolved="false"></xref>s thrown while evaluating the
+
+        specified <code class="paramref">enumerable</code> are caught and ignored.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The type of element held by the specified <code class="paramref">enumerable</code>.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The specified <code class="paramref">enumerable</code>, if it emits at least one element
+
+        and no <code>null</code> elements.
+    content.vb: Public Shared Function EmptyOrNullElements(Of T)(enumerable As IEnumerable(Of T), suppressExceptions As Boolean = False, name As String = Nothing) As IEnumerable(Of T)
+  overload: Extra.Guard.Against.EmptyOrNullElements*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the specified <code class="paramref">enumerable</code> emits no elements or at least
+
+      one <code>null</code> element.
+  nameWithType.vb: Against.EmptyOrNullElements(Of T)(IEnumerable(Of T), Boolean, String)
+  fullName.vb: Extra.Guard.Against.EmptyOrNullElements(Of T)(System.Collections.Generic.IEnumerable(Of T), Boolean, String)
+  name.vb: EmptyOrNullElements(Of T)(IEnumerable(Of T), Boolean, String)
+- uid: Extra.Guard.Against.InvalidEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  commentId: M:Extra.Guard.Against.InvalidEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  id: InvalidEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String)
+  parent: Extra.Guard.Against
+  langs:
+  - csharp
+  - vb
+  name: InvalidEnumerable<T>(IEnumerable<T>, bool, string?)
+  nameWithType: Against.InvalidEnumerable<T>(IEnumerable<T>, bool, string?)
+  fullName: Extra.Guard.Against.InvalidEnumerable<T>(System.Collections.Generic.IEnumerable<T>, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: Extra.Guard/src/Against.cs
+      branch: main
+      repo: git@github.com:jeffrey-w/Guard.git
+    id: InvalidEnumerable
+    path: ../src/Against.cs
+    startLine: 463
+  assemblies:
+  - Extra.Guard
+  namespace: Extra.Guard
+  summary: >-
+    Provides an <xref href="Extra.Guard.EnumerableValidator%601" data-throw-if-not-resolved="false"></xref> for asserting preconditions
+
+    over the specified <code class="paramref">enumerable</code> argument.
+  remarks: >-
+    The specified <code class="paramref">enumerable</code> is evaluated before it is
+
+    validated.
+  example: []
+  syntax:
+    content: public static EnumerableValidator<T> InvalidEnumerable<T>(IEnumerable<T> enumerable, bool suppressExceptions = false, string? name = null)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to validate.
+    - id: suppressExceptions
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, any <xref href="System.Exception" data-throw-if-not-resolved="false"></xref>s thrown while evaluating the
+
+        specified <code class="paramref">enumerable</code> are caught and ignored.
+    - id: name
+      type: System.String
+      description: The identifier for the parameter being validated.
+    typeParameters:
+    - id: T
+      description: The type of element held by the specified <code class="paramref">enumerable</code>.
+    return:
+      type: Extra.Guard.EnumerableValidator{{T}}
+      description: A new <xref href="Extra.Guard.EnumerableValidator%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function InvalidEnumerable(Of T)(enumerable As IEnumerable(Of T), suppressExceptions As Boolean = False, name As String = Nothing) As EnumerableValidator(Of T)
+  overload: Extra.Guard.Against.InvalidEnumerable*
+  nameWithType.vb: Against.InvalidEnumerable(Of T)(IEnumerable(Of T), Boolean, String)
+  fullName.vb: Extra.Guard.Against.InvalidEnumerable(Of T)(System.Collections.Generic.IEnumerable(Of T), Boolean, String)
+  name.vb: InvalidEnumerable(Of T)(IEnumerable(Of T), Boolean, String)
+references:
+- uid: Extra.Guard
+  commentId: N:Extra.Guard
+  href: Extra.html
+  name: Extra.Guard
+  nameWithType: Extra.Guard
+  fullName: Extra.Guard
+  spec.csharp:
+  - uid: Extra
+    name: Extra
+    href: Extra.html
+  - name: .
+  - uid: Extra.Guard
+    name: Guard
+    href: Extra.Guard.html
+  spec.vb:
+  - uid: Extra
+    name: Extra
+    href: Extra.html
+  - name: .
+  - uid: Extra.Guard
+    name: Guard
+    href: Extra.Guard.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Extra.Guard.Against.InvalidType*
+  commentId: Overload:Extra.Guard.Against.InvalidType
+  href: Extra.Guard.Against.html#Extra_Guard_Against_InvalidType_System_Type_System_Type_System_String_
+  name: InvalidType
+  nameWithType: Against.InvalidType
+  fullName: Extra.Guard.Against.InvalidType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Extra.Guard.Against.NullOrWhitespace*
+  commentId: Overload:Extra.Guard.Against.NullOrWhitespace
+  href: Extra.Guard.Against.html#Extra_Guard_Against_NullOrWhitespace_System_String_System_String_
+  name: NullOrWhitespace
+  nameWithType: Against.NullOrWhitespace
+  fullName: Extra.Guard.Against.NullOrWhitespace
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Extra.Guard.Against.Negative*
+  commentId: Overload:Extra.Guard.Against.Negative
+  href: Extra.Guard.Against.html#Extra_Guard_Against_Negative_System_Int32_System_String_
+  name: Negative
+  nameWithType: Against.Negative
+  fullName: Extra.Guard.Against.Negative
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Extra.Guard.Against.OutOfRange*
+  commentId: Overload:Extra.Guard.Against.OutOfRange
+  href: Extra.Guard.Against.html#Extra_Guard_Against_OutOfRange_System_Int32_System_Int32_System_Int32_System_String_
+  name: OutOfRange
+  nameWithType: Against.OutOfRange
+  fullName: Extra.Guard.Against.OutOfRange
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: Extra.Guard.Against.LessThan*
+  commentId: Overload:Extra.Guard.Against.LessThan
+  href: Extra.Guard.Against.html#Extra_Guard_Against_LessThan__1___0___0_System_String_
+  name: LessThan
+  nameWithType: Against.LessThan
+  fullName: Extra.Guard.Against.LessThan
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Extra.Guard.Against.GreaterThan*
+  commentId: Overload:Extra.Guard.Against.GreaterThan
+  href: Extra.Guard.Against.html#Extra_Guard_Against_GreaterThan__1___0___0_System_String_
+  name: GreaterThan
+  nameWithType: Against.GreaterThan
+  fullName: Extra.Guard.Against.GreaterThan
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Extra.Guard.Against.Null*
+  commentId: Overload:Extra.Guard.Against.Null
+  href: Extra.Guard.Against.html#Extra_Guard_Against_Null__1___0_System_String_
+  name: "Null"
+  nameWithType: Against.Null
+  fullName: Extra.Guard.Against.Null
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Extra.Guard.Against.Violation*
+  commentId: Overload:Extra.Guard.Against.Violation
+  href: Extra.Guard.Against.html#Extra_Guard_Against_Violation__1___0_System_Func___0_System_Boolean__System_String_System_String_
+  name: Violation
+  nameWithType: Against.Violation
+  fullName: Extra.Guard.Against.Violation
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{``0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Extra.Guard.Against.Empty*
+  commentId: Overload:Extra.Guard.Against.Empty
+  href: Extra.Guard.Against.html#Extra_Guard_Against_Empty__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_String_
+  name: Empty
+  nameWithType: Against.Empty
+  fullName: Extra.Guard.Against.Empty
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Extra.Guard.Against.NullElements*
+  commentId: Overload:Extra.Guard.Against.NullElements
+  href: Extra.Guard.Against.html#Extra_Guard_Against_NullElements__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_String_
+  name: NullElements
+  nameWithType: Against.NullElements
+  fullName: Extra.Guard.Against.NullElements
+- uid: Extra.Guard.Against.EmptyOrNullElements*
+  commentId: Overload:Extra.Guard.Against.EmptyOrNullElements
+  href: Extra.Guard.Against.html#Extra_Guard_Against_EmptyOrNullElements__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_String_
+  name: EmptyOrNullElements
+  nameWithType: Against.EmptyOrNullElements
+  fullName: Extra.Guard.Against.EmptyOrNullElements
+- uid: Extra.Guard.EnumerableValidator`1
+  commentId: T:Extra.Guard.EnumerableValidator`1
+  parent: Extra.Guard
+  href: Extra.Guard.EnumerableValidator-1.html
+  name: EnumerableValidator<T>
+  nameWithType: EnumerableValidator<T>
+  fullName: Extra.Guard.EnumerableValidator<T>
+  nameWithType.vb: EnumerableValidator(Of T)
+  fullName.vb: Extra.Guard.EnumerableValidator(Of T)
+  name.vb: EnumerableValidator(Of T)
+  spec.csharp:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Extra.Guard.Against.InvalidEnumerable*
+  commentId: Overload:Extra.Guard.Against.InvalidEnumerable
+  href: Extra.Guard.Against.html#Extra_Guard_Against_InvalidEnumerable__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_String_
+  name: InvalidEnumerable
+  nameWithType: Against.InvalidEnumerable
+  fullName: Extra.Guard.Against.InvalidEnumerable
+- uid: Extra.Guard.EnumerableValidator{{T}}
+  commentId: T:Extra.Guard.EnumerableValidator{``0}
+  parent: Extra.Guard
+  definition: Extra.Guard.EnumerableValidator`1
+  href: Extra.Guard.EnumerableValidator-1.html
+  name: EnumerableValidator<T>
+  nameWithType: EnumerableValidator<T>
+  fullName: Extra.Guard.EnumerableValidator<T>
+  nameWithType.vb: EnumerableValidator(Of T)
+  fullName.vb: Extra.Guard.EnumerableValidator(Of T)
+  name.vb: EnumerableValidator(Of T)
+  spec.csharp:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Extra.Guard.EnumerableValidator`1
+    name: EnumerableValidator
+    href: Extra.Guard.EnumerableValidator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
