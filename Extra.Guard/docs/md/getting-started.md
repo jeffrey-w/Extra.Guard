@@ -41,6 +41,8 @@ public class Foo
         this.i = i;
         this.s = s;
     }
+    
+    // ...
 }
 ```
 
@@ -50,9 +52,9 @@ condition, and perform the assignment in the main clause. We could even remove
 the braces and perform the assignment on the same line as each antecedent.
 However, these changes don't necessarily strike at the heart of the problem:
 we have failed to abstract away a common operation, and are repeating ourselves
-as a result. This not only adds additional boilerplate to the method, but it's likely that
-this or similar logic is duplicated across other methods that require argument
-validation.
+as a result. This not only adds additional boilerplate to the method, but it's
+likely that this or similar logic is duplicated across other methods that
+require argument validation.
 
 Instead, why don't we collapse the entire validation operation into a single
 method call.
@@ -74,13 +76,14 @@ public class Foo
 
 Wow! That's a lot more concise. We even managed to combine the assignment with
 the verification since the methods shown return the argument being validated if
-it respects the preconditions on it. All methods declared by the `Against` class
-do so.
+it respects the preconditions on it. All methods declared by the
+[Against](xref:Extra.Guard.Against) class do so.
 
 There are plenty of other methods for common validation scenarios. In addition,
-You may test arguments against an arbitrary predicate using the `Violation`
-method. Let's say that arguments to parameter `s` of `Bar` ought to match a
-given regular expression. We can achieve this as follows.
+You may test arguments against an arbitrary predicate using the
+[Violation](xref:Extra.Guard.Against.Violation*) method. Let's say that
+arguments to parameter `s` of `Bar` ought to match a given regular expression.
+We can achieve this as follows.
 
 ```csharp
 public class Foo
@@ -101,24 +104,29 @@ public class Foo
 
 ## Enumerables
 
-Validating arguments to parameters that belong to `IEnumerable` present a
-challenge since it often involves ensuring that *every* element they emit
-satisfies a precondition. Moreover, it is often the case that you'd like to
+Validating arguments to parameters that belong to
+[IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable)
+present a challenge since it often involves ensuring that *every* element they
+emit satisfies a precondition. Moreover, it is often the case that you'd like to
 verify multiple, orthogonal conditions on an `IEnumerable`. For that reason,
-the Extra.Guard library provides the `EnumerableValidator` class. You may call
-one or more methods through the fluent interface exposed by this class to verify
-any number of properties of the `IEnumerable` supplied to it. The following
-methods are available.
+the Extra.Guard library provides the
+[EnumerableValidator](xref:Extra.Guard.EnumerableValidator`1) class. You may
+call one or more methods through the fluent interface exposed by this class to
+verify any number of properties of the `IEnumerable` supplied to it. The
+following methods are available.
 
-- `Empty` &mdash; verifies that an `IEnumerable` argument emits at least one
-element
-- `NullElement` &mdash; verifies that no element emitted by the an `IEnumerable`
-argument is `null`.
-- `AnyViolation` &mdash; similar to `Against.Violation`, verifies that no
-element of an `IEnumerable` argument fails to satisfy an arbitrary predicate.
+- [Empty](xref:Extra.Guard.EnumerableValidator`1.Empty) &mdash; verifies that an
+`IEnumerable` argument emits at least one element
+- [NullElements](xref:Extra.Guard.EnumerableValidator`1.NullElements) &mdash;
+verifies that no element emitted by the an `IEnumerable` argument is `null`.
+- [AnyViolation](xref:Extra.Guard.EnumerableValidator`1.AnyViolation(System.Func{`0,System.Boolean},System.String))
+&mdash; similar to [Against.Violation](xref:Extra.Guard.Against.Violation*),
+verifies that no element of an `IEnumerable` argument fails to satisfy an
+arbitrary predicate.
 
 After calling the necessary methods on an `EnumerableValdiator` instance, you
-may call `Validated` to obtain the `IEnumerable` originally supplied.
+may call [Validated](xref:Extra.Guard.EnumerableValidator`1.Validated) to obtain
+the `IEnumerable` originally supplied.
 
 ```csharp
 public class Foo
@@ -136,18 +144,20 @@ public class Foo
             .AnyViolation(element => regex.IsMatch(element))
             .Validated();
     }
+    
+    // ...
 }
 ```
 
-Note that calling `InvalidEnumerable` on an `IEnumerable` forces its immediate
-validation.
+Note that calling [InvalidEnumerable](xref:Extra.Guard.Against.InvalidEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.String))
+on an `IEnumerable` forces its immediate validation.
 
-The `Against` class also declares a few convenience methods that address common
-`IEnumerable` validation scenarios.
+The [Against](xref:Extra.Guard.Against) class also declares a few convenience
+methods that address common `IEnumerable` validation scenarios.
 
-- `Against.Empty`
-- `Against.NullElements`
-- `Against.EmptyOrNullElements`
+- [Against.Empty](xref:Extra.Guard.Against.Empty*)
+- [Against.NullElements](xref:Extra.Guard.Against.NullElements*)
+- [Against.EmptyOrNullElements](xref:Extra.Guard.Against.EmptyOrNullElements*)
 
 That's it! With the facilities provided by the Extra.Guard library, you can
 reduce boilerplate, and better convey your intent in code. 
