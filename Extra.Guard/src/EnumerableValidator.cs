@@ -1,6 +1,6 @@
 using Extra.Extensions;
 
-namespace Guard;
+namespace Extra.Guard;
 
 /// <summary>
 /// The <c>EnumerableValidator</c> class provides a fluent interface for asserting

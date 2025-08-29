@@ -1,6 +1,6 @@
 ﻿using Extra.Extensions;
 
-namespace Guard;
+namespace Extra.Guard;
 
 /// <summary>
 /// The <c>Against</c> class provides utility methods for preventing violations to
