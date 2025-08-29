@@ -10,9 +10,9 @@
         <Authors>Jeff Wilgus</Authors>
         <Description>A library that provides a means for verifying preconditions on function arguments.</Description>
         <Copyright>Jeff Wilgus</Copyright>
-        <PackageProjectUrl>https://jeffrey-w.github.io/Guard/</PackageProjectUrl>
+        <PackageProjectUrl>https://jeffrey-w.github.io/Extra.Guard/</PackageProjectUrl>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <RepositoryUrl>https://github.com/jeffrey-w/Guard</RepositoryUrl>
+        <RepositoryUrl>https://github.com/jeffrey-w/Extra.Guard</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>logo.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
