@@ -7,10 +7,10 @@ exception is thrown.
 
 ## Motivation
 
-This library draws influence from methods provided by the
+This library draws inspiration from the
 [Java standard library](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#requireNonNull-T-).
-It also takes many cues from similar
-[libraries](https://github.com/ardalis/guardclauses) for the .NET platform. The
-modifications and refinements made to implement this library reflect the author's
-personal preferences and attitudes towards programming in general and argument
-validation specifically.
+It also takes cues from similar
+[libraries](https://github.com/ardalis/guardclauses) for the .NET platform. Like those libraries, this one intends
+to abstract a repetitive task, and provide developers with a tool for reducing
+boilerplate code. Any particularities of this library reflect the authors'
+attitude towards programming in general, and argument validation specifically.

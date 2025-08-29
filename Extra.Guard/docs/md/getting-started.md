@@ -44,17 +44,15 @@ public class Foo
 }
 ```
 
-This not only adds additional boilerplate to the method, but it's likely that
-this or similar logic is duplicated across other methods that require argument
-validation.
-
 We could modify our verification logic somewhat to adhere to what some consider
 "good style". For example, we might instead check for the negation of each
 condition, and perform the assignment in the main clause. We could even remove
 the braces and perform the assignment on the same line as each antecedent.
 However, these changes don't necessarily strike at the heart of the problem:
 we have failed to abstract away a common operation, and are repeating ourselves
-as a result.
+as a result. This not only adds additional boilerplate to the method, but it's likely that
+this or similar logic is duplicated across other methods that require argument
+validation.
 
 Instead, why don't we collapse the entire validation operation into a single
 method call.
@@ -80,9 +78,9 @@ it respects the preconditions on it. All methods declared by the `Against` class
 do so.
 
 There are plenty of other methods for common validation scenarios. In addition,
-if you need to test arguments against an arbitrary predicate using the
-`Violation` method. Let's say that arguments to parameter `s` of `Bar` ought to
-match a given regular expression. We can achieve this as follows.
+You may test arguments against an arbitrary predicate using the `Violation`
+method. Let's say that arguments to parameter `s` of `Bar` ought to match a
+given regular expression. We can achieve this as follows.
 
 ```csharp
 public class Foo
@@ -104,13 +102,13 @@ public class Foo
 ## Enumerables
 
 Validating arguments to parameters that belong to `IEnumerable` present a
-challenge since it often involves ensuring that *every* element it emits
+challenge since it often involves ensuring that *every* element they emit
 satisfies a precondition. Moreover, it is often the case that you'd like to
 verify multiple, orthogonal conditions on an `IEnumerable`. For that reason,
-the Extra.Guard provides the `EnumerableValidator` class. You may call one or
-more methods through the fluent interface exposed by this class to verify any
-number of properties of the `IEnumerable` supplied to it. The following methods
-are available.
+the Extra.Guard library provides the `EnumerableValidator` class. You may call
+one or more methods through the fluent interface exposed by this class to verify
+any number of properties of the `IEnumerable` supplied to it. The following
+methods are available.
 
 - `Empty` &mdash; verifies that an `IEnumerable` argument emits at least one
 element

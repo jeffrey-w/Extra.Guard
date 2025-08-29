@@ -14,5 +14,5 @@ The Extra.Guard library can be installed using
 
 ## Code Repository
 
-Source code for ReflActive may be found
+Source code for the Extra.Guard may be found
 [here](https://github.com/jeffrey-w/Extra.Guard).
